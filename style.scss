@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  // colors
+  --color-beaver: #9e7f66;
+  --color-cod-gray: #111111;
+  --color-mirage: #17192b;
+  --color-ebony-clay: #242b37;
+  --color-shuttle-gray: #5c6779;
+  --color-dark-gray: #4c4c4c;
+  --color-white: #fff;
+  --color-almost-white: #fafafa;
+  --color-border: rgba(151, 151, 151, 0.15);
+  --color-dark-blue-shaodw: rgba(56, 66, 85, 0.5);
+  --color-error: #b54949;
+
+  // font weights
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+  --card-shadow: 0 7.5rem 10rem -5rem var(--color-dark-blue-shaodw);
+}
+
+$desktop: 1200px;
+$tablet-end: 1199px;
+$tablet-start: 768px;
+$mobile: 767px;
+
+@mixin max-width($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
+}
+@mixin min-width($arg) {
+  @media screen and (min-width: $arg) {
+    @content;
+  }
+}
+@mixin min-max-width($arg) {
+  @media screen and (min-width: $arg) and (max-width: $arg) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--color-almost-white);
+  font-family: "Spartan", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  width: 100%;
+  max-width: 115rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
