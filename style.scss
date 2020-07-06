@@ -92,3 +92,57 @@ a {
   padding: 0 2rem;
   margin: 0 auto;
 }
+
+.heading-primary{
+    font-size: 6.4rem;
+    font-weight: var(--weight-light);
+    color: var(--color-white);
+}
+
+.description{
+    max-width: 46rem;
+    font-size: 1.8rem;
+    color: var(--color-ebony-clay);
+    // letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.main-btn{
+    text-transform: uppercase;
+    color: var(--color-white);
+    padding: 2rem 5.4rem;
+    border: 1px solid var(--color-white);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: var(--transition) background-color, var(--transition) color;
+}
+
+// header
+.header{
+    background-image: url(/images/homepage/hero-bg-desktop@2x.jpg);
+    min-height: 82rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    color: var(--color-white);
+
+    &__heading-primary{
+        margin-top: 15rem;
+        max-width: 54rem;
+        margin-bottom: 3rem;
+    }
+
+    &__description{
+        color: var(--color-white);
+        margin-bottom: 4rem;
+    }
+
+    &__main-btn{
+        &:hover{
+            background-color: var(--color-white);
+            color: var(--color-cod-gray);
+        }
+    }
+}
+
