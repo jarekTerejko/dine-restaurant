@@ -123,6 +123,11 @@ a {
   font-size: 1.5rem;
   letter-spacing: 1px;
   transition: var(--transition) background-color, var(--transition) color;
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-cod-gray);
+  }
 }
 
 .two-col-grid {
@@ -156,12 +161,12 @@ a {
     margin-bottom: 4rem;
   }
 
-  &__main-btn {
-    &:hover {
-      background-color: var(--color-white);
-      color: var(--color-cod-gray);
-    }
-  }
+  // &__main-btn {
+  //   &:hover {
+  //     background-color: var(--color-white);
+  //     color: var(--color-cod-gray);
+  //   }
+  // }
 }
 
 // section advantages
@@ -301,5 +306,54 @@ a {
 
   &__description {
     color: inherit;
+  }
+}
+
+// reservation
+.reservation{
+  background: url(/images/homepage/ready-bg-desktop@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 9rem 0;
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__heading{
+    font-size: 4rem;
+    color: var(--color-white);
+  }
+}
+
+// footer
+.footer{
+  background: var(--color-cod-gray);
+  color: var(--color-white);
+  padding: 9rem 0;
+
+  &__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__paragraph{
+    
+    text-transform: uppercase;
+
+    span{
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: var(--weight-regular);
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+    }
+
+    a{
+      color: inherit;
+    }
   }
 }
