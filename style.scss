@@ -309,42 +309,141 @@ a {
   }
 }
 
+// events
+.events {
+  padding: 16rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f2f3f5;
+    height: 320px;
+    width: 38%;
+    border-top-right-radius: 100px;
+    z-index: -1;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  &__col-l {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 76px;
+      left: -40px;
+      top: -36px;
+      background: url(/images/patterns/pattern-lines.svg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__col-r {
+    margin-left: 7rem;
+  }
+
+  &__description {
+    margin-bottom: 5rem;
+  }
+
+  .main-btn--events {
+    border-color: var(--color-cod-gray);
+    background: var(--color-cod-gray);
+
+    &:hover {
+      color: var(--color-cod-gray);
+      background: var(--color-white);
+    }
+  }
+
+  &__navigation {
+    margin-top: 8rem;
+  }
+
+  &__nav-list {
+    list-style: none;
+  }
+
+  &__btn-trigger {
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    padding: 0.8rem 0;
+    color: var(--color-shuttle-gray);
+    font-family: "Spartan", sans-serif;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    position: relative;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-cod-gray);
+    }
+
+    &.active {
+      color: var(--color-cod-gray);
+
+      &::before {
+        content: "";
+        height: 1px;
+        width: 70px;
+        position: absolute;
+        left: -100px;
+        background: var(--color-beaver);
+        top: 40%;
+      }
+    }
+  }
+}
+
 // reservation
-.reservation{
+.reservation {
   background: url(/images/homepage/ready-bg-desktop@2x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 9rem 0;
 
-  &__content{
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__heading{
+  &__heading {
     font-size: 4rem;
     color: var(--color-white);
   }
 }
 
 // footer
-.footer{
+.footer {
   background: var(--color-cod-gray);
   color: var(--color-white);
   padding: 9rem 0;
 
-  &__content{
+  &__content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  &__paragraph{
-    
+  &__paragraph {
     text-transform: uppercase;
 
-    span{
+    span {
       display: block;
       margin-bottom: 1rem;
       font-weight: var(--weight-regular);
@@ -352,7 +451,7 @@ a {
       letter-spacing: 2px;
     }
 
-    a{
+    a {
       color: inherit;
     }
   }
