@@ -393,6 +393,10 @@ a {
       color: var(--color-cod-gray);
     }
 
+    &:focus{
+      outline: none;
+    }
+
     &.active {
       color: var(--color-cod-gray);
 
