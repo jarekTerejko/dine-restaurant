@@ -105,6 +105,14 @@ a {
   margin-bottom: 3rem;
   max-width: 40rem;
   font-weight: var(--weight-bold);
+
+  @include max-width(1149px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include max-width(499px) {
+    font-size: 3rem;
+  }
 }
 
 .description {
@@ -113,6 +121,11 @@ a {
   color: var(--color-ebony-clay);
   line-height: 1.6;
   font-weight: var(--weight-light);
+
+  @include max-width(1149px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .main-btn {
@@ -134,6 +147,16 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
+
+  @include max-width(1149px) {
+    grid-template-columns: 1fr;
+    padding: 0 10rem;
+  }
+
+  @include max-width(649px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .pattern-divide {
@@ -150,23 +173,52 @@ a {
   padding: 60px 0;
   color: var(--color-white);
 
+  @include max-width(1149px) {
+    background-image: url(./images/homepage/hero-bg-tablet@2x.jpg);
+    background-position: top;
+    min-height: 110rem;
+    text-align: center;
+  }
+
+  @include max-width(499px) {
+    background-image: url(./images/homepage/hero-bg-mobile@2x.jpg);
+  }
+
+  &__site-link {
+    @include max-width(1149px) {
+      margin-top: 48rem;
+    }
+    @include max-width(499px) {
+      margin-top: 34rem;
+    }
+  }
+
   &__heading-primary {
     margin-top: 15rem;
     max-width: 54rem;
     margin-bottom: 3rem;
+
+    @include max-width(1149px) {
+      font-size: 5rem;
+      margin-top: 4rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include max-width(649px) {
+      font-size: 4.2rem;
+    }
   }
 
   &__description {
     color: var(--color-white);
     margin-bottom: 4rem;
-  }
 
-  // &__main-btn {
-  //   &:hover {
-  //     background-color: var(--color-white);
-  //     color: var(--color-cod-gray);
-  //   }
-  // }
+    @include max-width(1149px) {
+      margin: 0 auto 4rem auto;
+      max-width: 68rem;
+    }
+  }
 }
 
 // section advantages
@@ -186,6 +238,10 @@ a {
     width: 60%;
     border-top-right-radius: 100px;
     z-index: -1;
+
+    @include max-width(499px) {
+      display: none;
+    }
   }
 
   &::after {
@@ -198,39 +254,73 @@ a {
     width: 60%;
     border-top-left-radius: 100px;
     z-index: -1;
+
+    @include max-width(499px) {
+      display: none;
+    }
   }
 
   &__img-left {
     transform: translateY(-70px);
     box-shadow: var(--card-shadow);
     display: none;
+
+    @include max-width(499px) {
+      display: block;
+    }
   }
 
   &__img-right {
     position: relative;
-    transform: translateY(70px);
     display: none;
+    @include max-width(499px) {
+      display: block;
+      grid-row: 3/4;
+      box-shadow: var(--card-shadow);
+    }
   }
 
-  &__col-img-l{
+  &__col-img-l {
     background: url(./images/homepage/enjoyable-place-desktop@2x.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 72rem;
+    background-size: contain;
+    padding-top: 133%;
     transform: translateY(-70px);
     box-shadow: var(--card-shadow);
+
+    @include max-width(1149px) {
+      background: url(./images/homepage/enjoyable-place-tablet@2x.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding-top: 62.82%; /* (img-height / img-width * container-width) */
+    }
+
+    @include max-width(499px) {
+      display: none;
+    }
   }
 
-  &__col-img-r{
+  &__col-img-r {
     background: url(./images/homepage/locally-sourced-desktop@2x.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 72rem;
+    padding-top: 133%;
     transform: translateY(70px);
     box-shadow: var(--card-shadow);
 
+    @include max-width(1149px) {
+      background: url(./images/homepage/locally-sourced-tablet@2x.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      grid-row: 3/4;
+      transform: translateY(0);
+      padding-top: 62.82%; /* (img-height / img-width * container-width) */
+    }
+    @include max-width(499px) {
+      display: none;
+    }
   }
 
   &__col-r {
@@ -240,6 +330,13 @@ a {
     flex-direction: column;
     justify-content: center;
     position: relative;
+
+    @include max-width(1149px) {
+      transform: translateY(0);
+      text-align: center;
+      align-items: center;
+      margin: 0 auto 15rem auto;
+    }
   }
 
   &__col-l {
@@ -247,6 +344,15 @@ a {
     margin-left: 0;
     z-index: 1;
     transform: translateY(70px);
+
+    @include max-width(1149px) {
+      transform: translateY(0);
+      margin: 10rem auto 15rem auto;
+    }
+
+    @include max-width(1149px) {
+      margin-top: 7rem;
+    }
 
     &::before {
       content: "";
@@ -258,11 +364,24 @@ a {
       background: url(./images/patterns/pattern-lines.svg);
       background-position: center;
       background-size: contain;
+
+      @include max-width(1149px) {
+        left: 130%;
+        top: -90%;
+      }
+
+      @include max-width(649px) {
+        display: none;
+      }
     }
   }
 
   &__patern {
     align-self: flex-start;
+
+    @include max-width(1149px) {
+      align-self: center;
+    }
   }
 }
 
@@ -274,13 +393,58 @@ a {
   color: var(--color-white);
   background: var(--color-cod-gray);
 
+  @include max-width(1149px) {
+    padding-top: 10rem;
+  }
+
   &__cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include max-width(1149px) {
+      grid-template-columns: 1fr;
+      padding: 0 10rem;
+    }
+
+    @include max-width(649px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__col-l {
+    @include max-width(1149px) {
+      text-align: center;
+    }
+  }
+
+  &__patern {
+    @include max-width(1149px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__heading-secondary {
+    @include max-width(1149px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__description {
+    @include max-width(1149px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__col-r {
     margin-top: 5.7rem;
+
+    @include max-width(1149px) {
+      margin-top: 7rem;
+    }
   }
 
   &__meal-container {
@@ -290,14 +454,26 @@ a {
     margin-top: 3rem;
     border-bottom: 1px solid var(--color-border);
 
+    @include max-width(649px) {
+      display: block;
+    }
+
     &:first-child {
       margin-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: unset;
     }
   }
 
   &__meal-img-container {
     width: 13rem;
     position: relative;
+
+    @include max-width(649px) {
+      width: 100%;
+    }
 
     &::before {
       content: "";
@@ -307,6 +483,16 @@ a {
       width: 30px;
       height: 1px;
       background: var(--color-beaver);
+
+      @include max-width(649px) {
+        display: none;
+      }
+    }
+  }
+
+  &__meal-img {
+    @include max-width(649px) {
+      margin: 0 auto 3rem auto;
     }
   }
 
@@ -315,6 +501,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include max-width(649px) {
+      text-align: center;
+      max-width: 42rem;
+      margin: 0 auto;
+    }
   }
 
   &__meal-title {
@@ -336,6 +528,9 @@ a {
 .events {
   padding: 16rem 0;
   position: relative;
+  @include max-width(499px) {
+    padding: 12rem 0;
+  }
 
   &::before {
     content: "";
@@ -348,16 +543,34 @@ a {
     width: 38%;
     border-top-right-radius: 100px;
     z-index: -1;
+
+    @include max-width(649px) {
+      display: none;
+    }
   }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+
+    @include max-width(1149px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__col-l {
     position: relative;
+
+    @include max-width(1149px) {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+
+    @include max-width(649px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &::before {
       content: "";
@@ -369,11 +582,30 @@ a {
       background: url(/images/patterns/pattern-lines.svg);
       background-position: center;
       background-size: contain;
+
+      @include max-width(1149px) {
+        left: 20px;
+      }
+
+      @include max-width(649px) {
+        display: none;
+      }
     }
   }
 
   &__col-r {
     margin-left: 7rem;
+    position: relative;
+
+    @include max-width(1149px) {
+      margin-left: 0;
+      margin-top: 20rem;
+      text-align: center;
+    }
+
+    @include max-width(649px) {
+      margin-top: 26rem;
+    }
   }
 
   &__description {
@@ -392,10 +624,30 @@ a {
 
   &__navigation {
     margin-top: 8rem;
+    width: 100%;
+
+    @include max-width(1149px) {
+      position: absolute;
+      left: 0;
+      top: -200px;
+    }
+
+    @include max-width(649px) {
+      top: -280px;
+    }
   }
 
   &__nav-list {
     list-style: none;
+
+    @include max-width(1149px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include max-width(649px) {
+      flex-direction: column;
+    }
   }
 
   &__btn-trigger {
@@ -412,11 +664,15 @@ a {
     position: relative;
     transition: var(--transition);
 
+    @include max-width(1149px) {
+      padding: 1rem;
+    }
+
     &:hover {
       color: var(--color-cod-gray);
     }
 
-    &:focus{
+    &:focus {
       outline: none;
     }
 
@@ -431,6 +687,12 @@ a {
         left: -100px;
         background: var(--color-beaver);
         top: 40%;
+
+        @include max-width(1149px) {
+          left: 50%;
+          transform: translateX(-50%);
+          top: 40px;
+        }
       }
     }
   }
@@ -439,20 +701,43 @@ a {
 // reservation
 .reservation {
   background: url(./images/homepage/ready-bg-desktop@2x.jpg);
-  background-position: center;
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 9rem 0;
+
+  @include max-width(1149px) {
+    background: url(./images/homepage/ready-bg-tablet@2x.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include max-width(649px) {
+    background: url(./images/homepage/ready-bg-mobile@2x.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include max-width(1149px) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__heading {
-    font-size: 4rem;
     color: var(--color-white);
+    max-width: 100%;
+    margin-bottom: 0;
+
+    @include max-width(1149px) {
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -465,10 +750,36 @@ a {
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+    @include max-width(1149px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include max-width(767px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__col-3 {
+    @include max-width(1149px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    @include max-width(767px) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
   }
 
   &__paragraph {
     text-transform: uppercase;
+
+    @include max-width(399px) {
+      font-size: 0.8rem;
+    }
 
     span {
       display: block;
@@ -476,6 +787,10 @@ a {
       font-weight: var(--weight-regular);
       font-size: 1.4rem;
       letter-spacing: 2px;
+
+      @include max-width(399px) {
+        font-size: 1rem;
+      }
     }
 
     a {
