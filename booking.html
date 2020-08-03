@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="form.js"></script>
+    <title>Dine - Booking</title>
+  </head>
+  <body>
+    <!-- booking-header -->
+    <header class="header booking-header">
+      <div class="container">
+        <a href="index.html" class="site-link booking-header__site-link">
+          <img src="./images/logo.svg" alt="logo" class="logo" />
+        </a>
+        <div class="booking-header__cols">
+          <div class="booking-header__col-l">
+            <h1
+              class="header__heading-primary booking-header__heading-primary heading-primary"
+            >
+              Reservations
+            </h1>
+            <p class="description header__description">
+              We can’t wait to host you. If you have any special requirements
+              please feel free to call on the phone number below. We’ll be happy
+              to accommodate you.
+            </p>
+          </div>
+          <div class="booking-header__col-r">
+            <form action="" class="form">
+              <div class="form__row">
+                <label for="name" class="form__label">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form__name"
+                  placeholder="Name"
+                />
+                <small class="form__error"></small>
+              </div>
+              <div class="form__row">
+                <label for="email" class="form__label">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form__email"
+                  placeholder="Email"
+                />
+                <small class="form__error"></small>
+              </div>
+              <div class="form__row form__row--date">
+                <span>Pick a date</span>
+                <input
+                  type="number"
+                  name="month"
+                  id="month"
+                  class="form__month"
+                  min="1"
+                  max="12"
+                  placeholder="MM"
+                />
+                <input
+                  type="number"
+                  name="date"
+                  id="date"
+                  class="form__date"
+                  min="1"
+                  max="31"
+                  placeholder="DD"
+                />
+                <input
+                  type="number"
+                  name="year"
+                  id="year"
+                  class="form__year"
+                  min="2020"
+                  max="2030"
+                  placeholder="YYYY"
+                />
+                <small class="form__error"></small>
+              </div>
+              <div class="form__row form__row--time">
+                <span>Pick a time</span>
+                <input
+                  type="number"
+                  name="hour"
+                  id="hour"
+                  min="0"
+                  max="12"
+                  class="form__hour"
+                  placeholder="HH"
+                />
+                <input
+                  type="number"
+                  name="minute"
+                  id="minute"
+                  min="0"
+                  max="59"
+                  class="form__minute"
+                  placeholder="MM"
+                />
+                <div class="form__am-pm-container">
+                  <div class="form__am-pm-selected">
+                    <span class="form__am-pm">AM</span
+                    ><img src="./images/icons/icon-arrow.svg" alt="" />
+                  </div>
+                  <div class="form__am-pm-options">
+                    <div class="form__option-time">
+                      <img
+                        src="./images/icons/icon-check.svg"
+                        alt=""
+                        class="form__icon-check form__icon-check--visible"
+                      />
+                      <span class="form__am">AM</span>
+                    </div>
+                    <div class="form__option-time">
+                      <img
+                        src="./images/icons/icon-check.svg"
+                        alt=""
+                        class="form__icon-check"
+                      />
+                      <span class="form__pm">PM</span>
+                    </div>
+                  </div>
+                </div>
+                <small class="form__error"></small>
+              </div>
+              <div class="form__row">
+                <div class="form__guests-count">
+                  <button
+                    type="button"
+                    class="form__people-btn form__icon-minus"
+                  ></button>
+
+                  <span>
+                    <span class="form__guests-number"></span>
+                    <span class="form__guests-word"> people</span>
+                  </span>
+                  <button
+                    type="button"
+                    class="form__people-btn form__icon-plus"
+                  ></button>
+                </div>
+              </div>
+              <div class="form__row">
+                <button type="submit" class="main-btn main-btn--form">
+                  Make Reservation
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- booking-header end -->
+    <!-- footer -->
+    <footer class="footer footer--booking">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__col-1">
+            <a href="index.html" class="site-link"
+              ><img src="./images/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="footer__col-2">
+            <p class="footer__paragraph">
+              <span>Marthwaite, Sedbergh</span>
+              <span>Cumbria</span>
+              <span><a href="tel:++00 44 123 4567">+00 44 123 4567</a></span>
+            </p>
+          </div>
+          <div class="footer__col-3">
+            <p class="footer__paragraph">
+              <span>Open Times</span>
+              <span>Mon - Fri: 09:00 AM - 10:00 PM</span>
+              <span>Sat - Sun: 09:00 AM - 11:30 PM</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </body>
+</html>

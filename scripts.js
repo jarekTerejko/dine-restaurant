@@ -25,8 +25,8 @@ const eventsHeading = document.querySelector(".events__heading");
 const eventsDescription = document.querySelector(".events__description");
 
 eventsImg.src = eventsContent[0].imgSrc;
-    eventsHeading.textContent = eventsContent[0].heading;
-    eventsDescription.textContent =eventsContent[0].description;
+eventsHeading.textContent = eventsContent[0].heading;
+eventsDescription.textContent = eventsContent[0].description;
 
 eventsBtns.forEach((btn, i) => {
   btn.addEventListener("click", () => {
